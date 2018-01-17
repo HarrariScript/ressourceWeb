@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+     <div class="form-group">
+       <input type="text" class="form-control" [(ngModel)]="keyWord">
+       <button (click)="onSearch()">search</button>
+     </div>
+  </div>
+  <div class="row ">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>ID </th>
+        <th>nom</th>
+        <th>raison social </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let e of pageEntreprise?.content" class="clickable" (click)="onselect(e.id)">
+        <td>{{e.id}}</td>
+        <td>{{e.nom}}</td>
+        <td>{{e.raisonSocial}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row" *ngIf="id!=0">
+      <app-ressource [entrepriseID]="id"></app-ressource>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>ID </th>
+        <th>Name</th>
+        <th>Date Achat </th>
+        <th>prix </th>
+        <th>note</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let e of pageRessource?.content">
+        <td>{{e.id}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.dateAchat}}</td>
+        <td>{{e.prix}}</td>
+        <td>{{e.note}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
